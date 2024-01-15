@@ -1,0 +1,17 @@
+E:\Godot\KlikSpel\.godot\mono\temp\bin\Debug\KlikSpel.deps.json
+E:\Godot\KlikSpel\.godot\mono\temp\bin\Debug\KlikSpel.runtimeconfig.json
+E:\Godot\KlikSpel\.godot\mono\temp\bin\Debug\KlikSpel.dll
+E:\Godot\KlikSpel\.godot\mono\temp\bin\Debug\KlikSpel.pdb
+E:\Godot\KlikSpel\.godot\mono\temp\bin\Debug\GodotSharp.dll
+E:\Godot\KlikSpel\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+E:\Godot\KlikSpel\.godot\mono\temp\obj\Debug\KlikSpel.csproj.AssemblyReference.cache
+E:\Godot\KlikSpel\.godot\mono\temp\obj\Debug\KlikSpel.GeneratedMSBuildEditorConfig.editorconfig
+E:\Godot\KlikSpel\.godot\mono\temp\obj\Debug\KlikSpel.AssemblyInfoInputs.cache
+E:\Godot\KlikSpel\.godot\mono\temp\obj\Debug\KlikSpel.AssemblyInfo.cs
+E:\Godot\KlikSpel\.godot\mono\temp\obj\Debug\KlikSpel.csproj.CoreCompileInputs.cache
+E:\Godot\KlikSpel\.godot\mono\temp\obj\Debug\KlikSpel.csproj.CopyComplete
+E:\Godot\KlikSpel\.godot\mono\temp\obj\Debug\KlikSpel.dll
+E:\Godot\KlikSpel\.godot\mono\temp\obj\Debug\refint\KlikSpel.dll
+E:\Godot\KlikSpel\.godot\mono\temp\obj\Debug\KlikSpel.pdb
+E:\Godot\KlikSpel\.godot\mono\temp\obj\Debug\KlikSpel.genruntimeconfig.cache
+E:\Godot\KlikSpel\.godot\mono\temp\obj\Debug\ref\KlikSpel.dll

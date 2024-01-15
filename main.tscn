@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://doee530jfngxa"]
+
+[ext_resource type="Script" path="res://KlikKnop.cs" id="1_pjsqy"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="KlikPerSeconde" type="Label" parent="."]
+offset_left = 222.0
+offset_top = 121.0
+offset_right = 262.0
+offset_bottom = 144.0
+
+[node name="Klik" type="Button" parent="."]
+offset_left = 412.0
+offset_top = 282.0
+offset_right = 751.0
+offset_bottom = 353.0
+text = "Verkrijg klik"
+script = ExtResource("1_pjsqy")
+
+[node name="KlikAantalLabel" type="Label" parent="."]
+offset_left = 225.0
+offset_top = 58.0
+offset_right = 265.0
+offset_bottom = 81.0
+text = "test"
+
+[connection signal="pressed" from="Klik" to="Klik" method="_on_pressed"]
