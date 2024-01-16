@@ -1,34 +1,124 @@
-[gd_scene load_steps=2 format=3 uid="uid://doee530jfngxa"]
+[gd_scene load_steps=4 format=3 uid="uid://doee530jfngxa"]
 
+[ext_resource type="Texture2D" uid="uid://lue062es5okb" path="res://kk1.png" id="1_l2a67"]
 [ext_resource type="Script" path="res://KlikKnop.cs" id="1_pjsqy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cj6xd"]
+atlas = ExtResource("1_l2a67")
+region = Rect2(0, 0, 198, 29.3086)
 
 [node name="Main" type="Node2D"]
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="KlikPerSeconde" type="Label" parent="."]
-offset_left = 222.0
-offset_top = 121.0
-offset_right = 262.0
-offset_bottom = 144.0
+[node name="Background" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1920.0
+offset_bottom = 1079.0
+color = Color(0.921569, 0.92549, 0.929412, 1)
 
-[node name="Klik" type="Button" parent="."]
-offset_left = 412.0
-offset_top = 282.0
-offset_right = 751.0
-offset_bottom = 353.0
+[node name="Header" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1920.0
+offset_bottom = 70.0
+color = Color(0.937255, 0.223529, 0.223529, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Header"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -560.0
+offset_right = 560.0
+offset_bottom = 70.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Header/MarginContainer"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Header/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Header/MarginContainer/VBoxContainer/CenterContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_cj6xd")
+
+[node name="SubMenu" type="ColorRect" parent="CanvasLayer"]
+offset_top = 70.0
+offset_right = 1920.0
+offset_bottom = 140.0
+
+[node name="GameField" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -560.0
+offset_top = -868.0
+offset_right = 560.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/GameField"]
+layout_mode = 0
+offset_right = 1120.0
+offset_bottom = 867.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/GameField/MarginContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/GameField/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button2" type="Button" parent="CanvasLayer/GameField/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="KlikPerSeconde" type="Label" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -74.0
+offset_top = 48.0
+offset_right = -34.0
+offset_bottom = 71.0
+grow_horizontal = 0
+text = "Kliks per second: 0"
+
+[node name="Klik" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.5
+offset_top = -21.0
+offset_right = 56.5
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "Verkrijg klik"
 script = ExtResource("1_pjsqy")
 
-[node name="KlikAantalLabel" type="Label" parent="."]
-offset_left = 225.0
-offset_top = 58.0
-offset_right = 265.0
-offset_bottom = 81.0
-text = "test"
+[node name="KlikAantalLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -88.0
+offset_top = 24.0
+offset_right = -34.0
+offset_bottom = 47.0
+grow_horizontal = 0
+text = "Kliks: 0"
 
-[connection signal="pressed" from="Klik" to="Klik" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Klik" to="CanvasLayer/Klik" method="_on_pressed"]

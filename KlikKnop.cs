@@ -3,13 +3,13 @@ using System;
 
 public partial class KlikKnop : Button
 {
-	private int klikAantal = 0;
-	private Label klikAantalLabel;
+	private int _klikAantal = 0;
+	private Label _klikAantalLabel;
 	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		klikAantalLabel = GetNode<Label>("../KlikAantalLabel");
+		_klikAantalLabel = GetNode<Label>("../KlikAantalLabel");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -20,8 +20,8 @@ public partial class KlikKnop : Button
 	
 	private void _on_pressed()
 	{
-		klikAantal++;
-		klikAantalLabel.Text = klikAantal.ToString();
-		GD.Print("Aantal kliks: " + klikAantal);
+		_klikAantal++;
+		_klikAantalLabel.Text = "Kliks: " + _klikAantal;
+		GD.Print("Aantal kliks: " + _klikAantal);
 	}
 }
