@@ -1,8 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1705437061
+::res://::1705449049
 icon.svg::CompressedTexture2D::783670409086645011::1705342502::1705342508::1::::<><>::
 kk1.png::CompressedTexture2D::813654018058805085::1705437061::1705437061::1::::<><>::
 kk2.png::CompressedTexture2D::882296359655192429::1705437061::1705437061::1::::<><>::
-KlikKnop.cs::CSharpScript::-1::1705436041::0::1::::<>Button<>::
-main.tscn::PackedScene::8150461324506241982::1705435979::0::1::::<><>::res://KlikKnop.cs
+KlikKnop.cs::CSharpScript::-1::1705448758::0::1::::<>TextureButton<>::
+main.tscn::PackedScene::8150461324506241982::1705449017::0::1::::<><>::uid://lue062es5okb::::res://kk1.png<>res://KlikKnop.cs<>uid://bum5w20x8e2xg::::res://wasmachine.jpg
 README.md::TextFile::-1::1705358874::0::1::::<><>::
+wasmachine.jpg::CompressedTexture2D::3816832344591235024::1705448255::1705448266::1::::<><>::

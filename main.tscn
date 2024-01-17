@@ -1,11 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://doee530jfngxa"]
+[gd_scene load_steps=6 format=3 uid="uid://doee530jfngxa"]
 
 [ext_resource type="Texture2D" uid="uid://lue062es5okb" path="res://kk1.png" id="1_l2a67"]
 [ext_resource type="Script" path="res://KlikKnop.cs" id="1_pjsqy"]
+[ext_resource type="Texture2D" uid="uid://bum5w20x8e2xg" path="res://wasmachine.jpg" id="3_qt5vu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cj6xd"]
 atlas = ExtResource("1_l2a67")
 region = Rect2(0, 0, 198, 29.3086)
+
+[sub_resource type="Theme" id="Theme_i8liq"]
 
 [node name="Main" type="Node2D"]
 
@@ -52,6 +55,47 @@ offset_top = 70.0
 offset_right = 1920.0
 offset_bottom = 140.0
 
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/SubMenu"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -560.0
+offset_right = 560.0
+offset_bottom = 70.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SubMenu/MarginContainer"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/SubMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/SubMenu/MarginContainer/VBoxContainer/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="KlikAantalLabel" type="Label" parent="CanvasLayer/SubMenu/MarginContainer/VBoxContainer/CenterContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 13
+text = "Kliks: 0"
+uppercase = true
+
+[node name="KlikPerSeconde" type="Label" parent="CanvasLayer/SubMenu/MarginContainer/VBoxContainer/CenterContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 13
+text = "Kliks per second: 0"
+uppercase = true
+
 [node name="GameField" type="ColorRect" parent="CanvasLayer"]
 anchors_preset = 7
 anchor_left = 0.5
@@ -64,61 +108,57 @@ offset_right = 560.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/GameField"]
-layout_mode = 0
-offset_right = 1120.0
-offset_bottom = 867.0
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/GameField"]
+layout_mode = 2
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 313.0
+offset_bottom = 65.0
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 15
-theme_override_constants/margin_right = 15
+theme_override_constants/margin_right = 0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/GameField/MarginContainer2"]
+layout_mode = 2
+color = Color(0.133333, 0.192157, 0.243137, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/GameField/MarginContainer2"]
+layout_mode = 2
+theme = SubResource("Theme_i8liq")
+text = "asdfasdfa"
+
+[node name="MarginContainer4" type="MarginContainer" parent="CanvasLayer/GameField"]
+offset_left = 15.0
+offset_top = 65.0
+offset_right = 313.0
+offset_bottom = 257.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 15
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/GameField/MarginContainer"]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/GameField/MarginContainer4"]
 layout_mode = 2
+color = Color(0.960784, 0.960784, 0.960784, 1)
 
-[node name="Button" type="Button" parent="CanvasLayer/GameField/MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Button2" type="Button" parent="CanvasLayer/GameField/MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="KlikPerSeconde" type="Label" parent="CanvasLayer"]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -74.0
-offset_top = 48.0
-offset_right = -34.0
-offset_bottom = 71.0
-grow_horizontal = 0
-text = "Kliks per second: 0"
-
-[node name="Klik" type="Button" parent="CanvasLayer"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -56.5
-offset_top = -21.0
-offset_right = 56.5
-offset_bottom = 21.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Verkrijg klik"
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
+offset_left = 799.0
+offset_top = 303.0
+offset_right = 999.0
+offset_bottom = 582.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("3_qt5vu")
 script = ExtResource("1_pjsqy")
 
-[node name="KlikAantalLabel" type="Label" parent="CanvasLayer"]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -88.0
-offset_top = 24.0
-offset_right = -34.0
-offset_bottom = 47.0
-grow_horizontal = 0
-text = "Kliks: 0"
+[node name="Label" type="Label" parent="CanvasLayer/TextureButton"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 292.0
+offset_right = 157.0
+offset_bottom = 315.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Wasmachine
+"
+horizontal_alignment = 1
+vertical_alignment = 2
 
-[connection signal="pressed" from="CanvasLayer/Klik" to="CanvasLayer/Klik" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/TextureButton" to="CanvasLayer/TextureButton" method="_on_pressed"]

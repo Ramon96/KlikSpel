@@ -1,15 +1,14 @@
 using Godot;
 using System;
 
-public partial class KlikKnop : Button
+public partial class KlikKnop : TextureButton
 {
 	private int _klikAantal = 0;
 	private Label _klikAantalLabel;
-	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		_klikAantalLabel = GetNode<Label>("../KlikAantalLabel");
+		_klikAantalLabel = GetNode<Label>("%KlikAantalLabel");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -25,3 +24,6 @@ public partial class KlikKnop : Button
 		GD.Print("Aantal kliks: " + _klikAantal);
 	}
 }
+
+
+
